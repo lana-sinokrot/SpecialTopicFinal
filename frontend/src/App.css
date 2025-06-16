@@ -1,0 +1,222 @@
+/* Import Bootstrap CSS */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* Main app container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding-top: 76px; /* Consistent padding for header height */
+  min-height: calc(100vh - 76px); /* Ensure content fills the viewport */
+}
+
+/* Special handling for home page */
+.main-content .home-page {
+  margin-top: -76px; /* Adjust to match new padding */
+  padding-top: 0;
+}
+
+/* Remove top margin when header is not present */
+.main-content.no-header {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Auth pages specific styles */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Prevent scrolling on auth pages */
+body:has(.auth-container) {
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+/* Remove any default margins that might cause spacing */
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+/* Base font size adjustments for better readability */
+html {
+  font-size: 16px;
+}
+
+/* Touch target size improvements */
+button,
+input,
+select,
+textarea,
+.nav-link,
+.btn {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 15px;
+    padding-top: 70px; /* Updated to match new navbar height */
+  }
+  
+  .main-content .home-page {
+    margin-top: -70px;
+    padding-top: 0;
+  }
+  
+  .main-content.no-header {
+    padding: 15px;
+  }
+
+  /* Ensure container padding is consistent */
+  .container {
+    padding: 0 15px;
+  }
+  
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Specific mobile adjustments for width 344-430px */
+@media (max-width: 430px) {
+  html {
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding: 10px;
+    padding-top: 60px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .mt-4 {
+    margin-top: 1rem;
+  }
+
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  /* Improve touch targets on mobile */
+  button,
+  input,
+  select,
+  textarea,
+  .nav-link,
+  .btn {
+    min-height: 48px;
+    padding: 8px 16px;
+    font-size: 16px; /* Ensure readable text size */
+  }
+
+  /* Stack elements vertically on mobile */
+  .row {
+    flex-direction: column;
+  }
+
+  /* Adjust form elements for better mobile experience */
+  input,
+  select,
+  textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Height-specific adjustments for 667-932px */
+@media (min-height: 667px) and (max-height: 932px) {
+  .auth-container,
+  .main-content {
+    min-height: 100vh;
+  }
+
+  .container {
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

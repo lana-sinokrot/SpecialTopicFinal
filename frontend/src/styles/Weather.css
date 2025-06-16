@@ -1,0 +1,151 @@
+.weather-widget {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  color: white;
+  width: 100%;
+  max-width: 350px;
+  margin: 1rem 0;
+}
+
+.current-weather {
+  margin-bottom: 1.5rem;
+}
+
+.weather-header {
+  margin-bottom: 1rem;
+}
+
+.weather-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.weather-header p {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.weather-info img {
+  width: 64px;
+  height: 64px;
+}
+
+.temperature {
+  margin-left: 1rem;
+}
+
+.temperature .temp {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.temperature .condition {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.detail span:first-child {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.detail span:last-child {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.forecast-day .date {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-day img {
+  width: 40px;
+  height: 40px;
+  margin: 0.25rem 0;
+}
+
+.forecast-temps {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.forecast-temps .min {
+  opacity: 0.7;
+}
+
+.weather-loading,
+.weather-error {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.weather-error {
+  color: #dc3545;
+}
+
+.header-weather {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.header-weather .weather-temp {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .header-weather {
+    display: none;
+  }
+} 
